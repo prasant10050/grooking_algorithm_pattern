@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="Python 3.10 (grooking_algorithm_patern)" project-jdk-type="Python SDK">
+  <component name="Black">
+    <option name="pathToExecutable" value="/opt/homebrew/bin/black" />
+    <option name="sdkName" value="Python 3.12 (grooking_algorithm_pattern)" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="Python 3.12 (grooking_algorithm_pattern)" project-jdk-type="Python SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
