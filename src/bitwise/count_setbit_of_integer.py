@@ -36,7 +36,31 @@ def optimiseBitwiseHelper(n):
     return count
 
 
+# Brian Kernighan’s algorithm#
+
+def CountSetBits(n):
+    count = 0
+    while n > 0:
+        n &= (n - 1)
+        count += 1
+    return count
+
+
 number = 125
 print("SetBit count is: ", helper(number))
 print("SetBit count is: ", bitwiseHelper(number))
 print("SetBit count is: ", optimiseBitwiseHelper(number))
+print('SetBit Count is: ', CountSetBits(number))
+
+
+def counting_bits(n):
+    ans = [0] * (n + 1)
+    for i in range(n + 1):
+        ans[i] = CountSetBits(i)
+    return ans
+
+
+n = 3
+print(counting_bits(n))
+# Write a program to return an array of number of 1’s in the
+# binary representation of every number in the range [0, n].
