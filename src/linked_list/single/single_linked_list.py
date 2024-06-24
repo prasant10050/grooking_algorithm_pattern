@@ -140,6 +140,26 @@ class LinkedList:
             self.size -= 1
             current_node = None
 
+    def len_iterative(self):
+
+        count = 0
+        cur_node = self.head
+
+        while cur_node:
+            count += 1
+            cur_node = cur_node.next
+        return count
+
+    def len_recursive(self, node):
+        if node is None:
+            return 0
+        return 1 + self.len_recursive(node.next)
+
+    def clear(self):
+        # clear the entire list.
+        self.tail = None
+        self.head = None
+
 
 llist = LinkedList()
 llist.append("A")
@@ -168,3 +188,7 @@ print(llist.search('F'))
 print("--------Size---------------")
 print(str(llist.size_of_list()))
 print(str(llist.size))
+print(llist.len_iterative())
+print(llist.len_recursive(llist.head))
+print("--------Clear---------------")
+llist.clear()
