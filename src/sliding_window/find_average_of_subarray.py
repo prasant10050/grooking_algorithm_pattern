@@ -1,5 +1,4 @@
 def find_average_of_subarray(k, arr):
-    print("init")
     result = []
     windowSum, windowStart = 0.0, 0
     for windowEnd in range(len(arr)):
@@ -12,7 +11,6 @@ def find_average_of_subarray(k, arr):
 
 
 def find_sum_of_array_upto_k(k, arr):
-    print("init 2")
     windowSum = sum(arr[:k])
     return windowSum
 
