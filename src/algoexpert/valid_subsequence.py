@@ -14,3 +14,12 @@
 # Sequence → [3, 7, 4]
 # 
 # Output → True
+
+def is_valid_subsequence(self, subSequenceString, originalString):
+    seqIdx = 0
+    for value in originalString:
+        if seqIdx == len(subSequenceString):
+            break
+        if subSequenceString[seqIdx] == value:
+            seqIdx += 1
+    return seqIdx == len(subSequenceString)
